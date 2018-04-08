@@ -13,9 +13,15 @@ namespace SalesForecast_v3.Views
         string SportsVisitorsText { get; set; }
         string FitnessSubscribersText { get; set; }
         string VisitorsAppearText { get; set; }
+
         string TotalSalesText { get; set; }
         string TotalExpensesText { get; set; }
         string TotalEarningsText { get; set; }
 
+        string error_TicketsSoldText { get; set; }
+        string error_TVCoverText { get; set; }
+        string error_SportsVisitorsText { get; set; }
+        string error_FitnessSubscribersText { get; set; }
+        string error_VisitorsAppearText { get; set; }
     }
 }

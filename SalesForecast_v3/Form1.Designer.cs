@@ -44,6 +44,11 @@
             this.TotalExpensesLabel = new System.Windows.Forms.Label();
             this.TotalEarningsLabel = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.error_TicketsSold = new System.Windows.Forms.Label();
+            this.error_TVCover = new System.Windows.Forms.Label();
+            this.error_SportsVisitors = new System.Windows.Forms.Label();
+            this.error_FitnessSubscribers = new System.Windows.Forms.Label();
+            this.error_VisitorsAppear = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -115,6 +120,7 @@
             this.txtTicketsSold.Name = "txtTicketsSold";
             this.txtTicketsSold.Size = new System.Drawing.Size(100, 20);
             this.txtTicketsSold.TabIndex = 7;
+            this.txtTicketsSold.TextChanged += new System.EventHandler(this.onTextChange_TextChanged);
             // 
             // txtTVCover
             // 
@@ -122,6 +128,7 @@
             this.txtTVCover.Name = "txtTVCover";
             this.txtTVCover.Size = new System.Drawing.Size(100, 20);
             this.txtTVCover.TabIndex = 8;
+            this.txtTVCover.TextChanged += new System.EventHandler(this.onTextChange_TextChanged);
             // 
             // txtSportsVisitors
             // 
@@ -129,6 +136,7 @@
             this.txtSportsVisitors.Name = "txtSportsVisitors";
             this.txtSportsVisitors.Size = new System.Drawing.Size(100, 20);
             this.txtSportsVisitors.TabIndex = 9;
+            this.txtSportsVisitors.TextChanged += new System.EventHandler(this.onTextChange_TextChanged);
             // 
             // txtFitnessSubscribers
             // 
@@ -136,6 +144,7 @@
             this.txtFitnessSubscribers.Name = "txtFitnessSubscribers";
             this.txtFitnessSubscribers.Size = new System.Drawing.Size(100, 20);
             this.txtFitnessSubscribers.TabIndex = 10;
+            this.txtFitnessSubscribers.TextChanged += new System.EventHandler(this.onTextChange_TextChanged);
             // 
             // txtVisitorsAppear
             // 
@@ -143,6 +152,7 @@
             this.txtVisitorsAppear.Name = "txtVisitorsAppear";
             this.txtVisitorsAppear.Size = new System.Drawing.Size(100, 20);
             this.txtVisitorsAppear.TabIndex = 11;
+            this.txtVisitorsAppear.TextChanged += new System.EventHandler(this.onTextChange_TextChanged);
             // 
             // TotalSalesLabel
             // 
@@ -181,11 +191,61 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // error_TicketsSold
+            // 
+            this.error_TicketsSold.AutoSize = true;
+            this.error_TicketsSold.Location = new System.Drawing.Point(386, 42);
+            this.error_TicketsSold.Name = "error_TicketsSold";
+            this.error_TicketsSold.Size = new System.Drawing.Size(35, 13);
+            this.error_TicketsSold.TabIndex = 16;
+            this.error_TicketsSold.Text = "label6";
+            // 
+            // error_TVCover
+            // 
+            this.error_TVCover.AutoSize = true;
+            this.error_TVCover.Location = new System.Drawing.Point(386, 76);
+            this.error_TVCover.Name = "error_TVCover";
+            this.error_TVCover.Size = new System.Drawing.Size(35, 13);
+            this.error_TVCover.TabIndex = 17;
+            this.error_TVCover.Text = "label6";
+            // 
+            // error_SportsVisitors
+            // 
+            this.error_SportsVisitors.AutoSize = true;
+            this.error_SportsVisitors.Location = new System.Drawing.Point(386, 111);
+            this.error_SportsVisitors.Name = "error_SportsVisitors";
+            this.error_SportsVisitors.Size = new System.Drawing.Size(35, 13);
+            this.error_SportsVisitors.TabIndex = 18;
+            this.error_SportsVisitors.Text = "label6";
+            // 
+            // error_FitnessSubscribers
+            // 
+            this.error_FitnessSubscribers.AutoSize = true;
+            this.error_FitnessSubscribers.Location = new System.Drawing.Point(386, 149);
+            this.error_FitnessSubscribers.Name = "error_FitnessSubscribers";
+            this.error_FitnessSubscribers.Size = new System.Drawing.Size(35, 13);
+            this.error_FitnessSubscribers.TabIndex = 19;
+            this.error_FitnessSubscribers.Text = "label6";
+            // 
+            // error_VisitorsAppear
+            // 
+            this.error_VisitorsAppear.AutoSize = true;
+            this.error_VisitorsAppear.Location = new System.Drawing.Point(386, 187);
+            this.error_VisitorsAppear.Name = "error_VisitorsAppear";
+            this.error_VisitorsAppear.Size = new System.Drawing.Size(35, 13);
+            this.error_VisitorsAppear.TabIndex = 20;
+            this.error_VisitorsAppear.Text = "label6";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.error_VisitorsAppear);
+            this.Controls.Add(this.error_FitnessSubscribers);
+            this.Controls.Add(this.error_SportsVisitors);
+            this.Controls.Add(this.error_TVCover);
+            this.Controls.Add(this.error_TicketsSold);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.TotalEarningsLabel);
             this.Controls.Add(this.TotalExpensesLabel);
@@ -227,6 +287,11 @@
         private System.Windows.Forms.Label TotalExpensesLabel;
         private System.Windows.Forms.Label TotalEarningsLabel;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label error_TicketsSold;
+        private System.Windows.Forms.Label error_TVCover;
+        private System.Windows.Forms.Label error_SportsVisitors;
+        private System.Windows.Forms.Label error_FitnessSubscribers;
+        private System.Windows.Forms.Label error_VisitorsAppear;
     }
 }
 

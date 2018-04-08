@@ -24,6 +24,13 @@ namespace SalesForecast_v3
         public string SportsVisitorsText { get => txtSportsVisitors.Text; set => txtSportsVisitors.Text = value; }
         public string FitnessSubscribersText { get => txtFitnessSubscribers.Text; set => txtFitnessSubscribers.Text = value; }
         public string VisitorsAppearText { get => txtVisitorsAppear.Text; set => txtVisitorsAppear.Text = value; }
+
+        public string error_TicketsSoldText { get => error_TicketsSold.Text; set => error_TicketsSold.Text = value; }
+        public string error_TVCoverText { get => error_TVCover.Text; set => error_TVCover.Text = value; }
+        public string error_SportsVisitorsText { get => error_SportsVisitors.Text; set => error_SportsVisitors.Text = value; }
+        public string error_FitnessSubscribersText { get => error_FitnessSubscribers.Text; set => error_FitnessSubscribers.Text = value; }
+        public string error_VisitorsAppearText { get => error_VisitorsAppear.Text; set => error_VisitorsAppear.Text = value; }
+
         public string TotalSalesText { get => TotalSalesLabel.Text; set => TotalSalesLabel.Text = value;  }
         public string TotalExpensesText { get => TotalExpensesLabel.Text; set => TotalExpensesLabel.Text = value; }
         public string TotalEarningsText { get => TotalEarningsLabel.Text; set => TotalEarningsLabel.Text = value; }
@@ -31,13 +38,23 @@ namespace SalesForecast_v3
         private void button1_Click(object sender, EventArgs e)
         {
             SalesForecastPresenter presenter = new SalesForecastPresenter(this);
-            presenter.CalculateSales();
+            presenter.Calculate();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Controls.OfType<TextBox>().ToList().ForEach(t => t.Text = "");
-            this.Controls.OfType<Label>().Where(l => l.Name.ToString().StartsWith("_error")).ToList().ForEach(l => l.Visible = false);
+            SalesForecastPresenter presenter = new SalesForecastPresenter(this);
+            presenter.Reset();
+            
+        }
+
+        private void onTextChange_TextChanged(object sender, EventArgs e)
+        {
+            SalesForecastPresenter presenter = new SalesForecastPresenter(this);
+            presenter.ShowLabel();
+
+           // this.Controls.OfType<Label>().Where(l => l.Name.ToString() == "error_" + ((TextBox)sender).Name).ToList().ForEach(l => l.Visible = false);
+      
         }
     }
 }
