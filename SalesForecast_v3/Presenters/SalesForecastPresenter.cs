@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SalesForecast_v3.Views;
 using SalesForecast_v3.Models;
+using System.Reflection;
 
 namespace SalesForecast_v3.Presenters
 {
@@ -16,6 +17,7 @@ namespace SalesForecast_v3.Presenters
         public SalesForecastPresenter(ISalesForecast view)
         {
             salesForecastView = view;
+
         }
         int Validate(string inputText)
         {
@@ -51,13 +53,13 @@ namespace SalesForecast_v3.Presenters
             salesForecastView.TotalEarningsText = ValidationCheck ? "Total Earnings " + salesForecast.CalculateEarnings().ToString() : "";
 
         }
-        public void Reset()
-        {
-            salesForecastView.TicketsSoldText = "";
-            salesForecastView.TVCoverText = "";
-            salesForecastView.SportsVisitorsText = "";
-            salesForecastView.FitnessSubscribersText = "";
-            salesForecastView.VisitorsAppearText = "";
+        public void Reset(string s = "")
+        {     
+            salesForecastView.TicketsSoldText = s;
+            salesForecastView.TVCoverText = s;
+            salesForecastView.SportsVisitorsText = s;
+            salesForecastView.FitnessSubscribersText = s;
+            salesForecastView.VisitorsAppearText = s;
         }
         public void ShowLabel()
         {

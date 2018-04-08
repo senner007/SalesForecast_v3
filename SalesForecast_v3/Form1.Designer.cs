@@ -157,7 +157,7 @@
             // TotalSalesLabel
             // 
             this.TotalSalesLabel.AutoSize = true;
-            this.TotalSalesLabel.Location = new System.Drawing.Point(492, 49);
+            this.TotalSalesLabel.Location = new System.Drawing.Point(581, 45);
             this.TotalSalesLabel.Name = "TotalSalesLabel";
             this.TotalSalesLabel.Size = new System.Drawing.Size(63, 13);
             this.TotalSalesLabel.TabIndex = 12;
@@ -166,7 +166,7 @@
             // TotalExpensesLabel
             // 
             this.TotalExpensesLabel.AutoSize = true;
-            this.TotalExpensesLabel.Location = new System.Drawing.Point(492, 79);
+            this.TotalExpensesLabel.Location = new System.Drawing.Point(581, 76);
             this.TotalExpensesLabel.Name = "TotalExpensesLabel";
             this.TotalExpensesLabel.Size = new System.Drawing.Size(83, 13);
             this.TotalExpensesLabel.TabIndex = 13;
@@ -175,7 +175,7 @@
             // TotalEarningsLabel
             // 
             this.TotalEarningsLabel.AutoSize = true;
-            this.TotalEarningsLabel.Location = new System.Drawing.Point(492, 111);
+            this.TotalEarningsLabel.Location = new System.Drawing.Point(581, 111);
             this.TotalEarningsLabel.Name = "TotalEarningsLabel";
             this.TotalEarningsLabel.Size = new System.Drawing.Size(78, 13);
             this.TotalEarningsLabel.TabIndex = 14;

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SalesForecast_v3.Views;
 using SalesForecast_v3.Presenters;
+using System.Runtime.InteropServices;
 
 namespace SalesForecast_v3
 {
@@ -17,8 +18,12 @@ namespace SalesForecast_v3
         public Form1()
         {
             InitializeComponent();
+            AllocConsole();
         }
-        
+        [DllImport("kernel32.dll", SetLastError = true)]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        static extern bool AllocConsole();
+
         public string TicketsSoldText { get => txtTicketsSold.Text; set => txtTicketsSold.Text = value; }
         public string TVCoverText { get => txtTVCover.Text; set => txtTVCover.Text = value; }
         public string SportsVisitorsText { get => txtSportsVisitors.Text; set => txtSportsVisitors.Text = value; }
