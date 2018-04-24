@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SalesForecast_v3.Models
 {
@@ -14,6 +11,8 @@ namespace SalesForecast_v3.Models
         public int SportsVisitors { get; set; }
         public int FitnessSubscribers { get; set; }
         public int VisitorsAppear { get; set; }
+
+        public string Date { get; set; }
 
         public decimal CalculateSales()
         {
